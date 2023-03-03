@@ -2,16 +2,18 @@ import styled from "@emotion/styled";
 import Bg1 from "../../assets/bg1.png";
 
 export const Container = styled.div`
-  width: 1450px;
+  max-width: 1450px;
   padding: 0 16px;
   margin: 0 auto;
-  position: relative;
 `;
 
-export const Section = styled.section`
+export const Section1 = styled.section`
   background-image: url(${Bg1});
+  background-repeat: no-repeat;
+  background-color: #343638;
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const MainContent = styled.div`
@@ -25,6 +27,7 @@ export const H1 = styled.h1`
   font-size: 80px;
   line-height: 139px;
   color: #ffffff;
+  /* fix with font */
   margin: 0 0 30px 0;
 `;
 
@@ -114,7 +117,9 @@ export const SpanCallDescription = styled.span`
   color: #ffffff;
 `;
 
-export const CallLogoIcon = styled.img``;
+export const CallLogoIcon = styled.img`
+  /* fix with font */
+`;
 
 export const ArrowDown = styled.button`
   position: absolute;
@@ -123,7 +128,7 @@ export const ArrowDown = styled.button`
   cursor: pointer;
   top: 633px;
   right: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
 `;
 
 export const ArrowDownButtonIcon = styled.img``;

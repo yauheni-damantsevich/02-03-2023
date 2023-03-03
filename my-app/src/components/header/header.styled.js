@@ -2,17 +2,17 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 16px;
   margin: 0 auto;
 `;
 
 export const HeaderStyled = styled.header`
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
 `;
 
 export const Logo = styled.div`
@@ -24,6 +24,7 @@ export const LogoIcon = styled.img``;
 export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const NavBarList = styled.ul`

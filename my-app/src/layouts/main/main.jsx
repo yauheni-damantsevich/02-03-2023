@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import React from "react";
 import {
   Container,
-  Section,
+  Section1,
   MainContent,
   H1,
   Wrapper,
@@ -24,11 +24,15 @@ import {
 import CallIcon from "../../assets/Call.svg";
 import ArrowDownIcon from "../../assets/Arrow-icon.svg";
 
+import Section2 from "../../components/section2/section2";
+import Section3 from "../../components/section3/section3";
+import Section4 from "../../components/section4/section4";
+
 export default function Main() {
   return (
     <main>
       <Container>
-        <Section>
+        <Section1>
           <MainContent>
             <H1>You’re the center of our world</H1>
             <Wrapper>
@@ -67,10 +71,13 @@ export default function Main() {
               </SideWrapper>
             </Wrapper>
           </MainContent>
-        </Section>
-        <ArrowDown>
-          <ArrowDownButtonIcon src={ArrowDownIcon} />
-        </ArrowDown>
+          <ArrowDown>
+            <ArrowDownButtonIcon src={ArrowDownIcon} />
+          </ArrowDown>
+        </Section1>
+        <Section2 />
+        <Section3 />
+        <Section4 />
       </Container>
     </main>
   );
