@@ -1,4 +1,3 @@
-import { css } from "@emotion/react/macro";
 import React from "react";
 import {
   MainWrapper,

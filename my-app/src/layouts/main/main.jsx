@@ -27,6 +27,7 @@ import ArrowDownIcon from "../../assets/Arrow-icon.svg";
 import Section2 from "../../components/section2/section2";
 import Section3 from "../../components/section3/section3";
 import Section4 from "../../components/section4/section4";
+import Section5 from "../../components/section5/section5";
 
 export default function Main() {
   return (
@@ -78,6 +79,7 @@ export default function Main() {
         <Section2 />
         <Section3 />
         <Section4 />
+        <Section5 />
       </Container>
     </main>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionWrapper, H2, LargeLogo } from "./section4.styled";
+import { SectionWrapper, H2 } from "./section4.styled";
 import Block2 from "../block2/block2";
 
 export default function Section4() {
