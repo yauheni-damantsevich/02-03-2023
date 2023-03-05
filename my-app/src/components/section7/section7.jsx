@@ -5,7 +5,7 @@ import Tabs from "../tabs/tabs";
 import Map from "../map/map";
 import { data } from "../../assets/data";
 
-export const Section7 = () => {
+export default function Section7() {
   const tab1Title = "NEW JERSEY";
   const tab2Title = "CONNECTICUT";
   const [activeContent, setActiveContent] = React.useState("tab1");
@@ -24,4 +24,4 @@ export const Section7 = () => {
       <Map data={data} props={activeContent} />
     </SectionWrapper>
   );
-};
+}

@@ -47,8 +47,10 @@ export const NavBarLink = styled(Link)`
   color: #ffffff;
 `;
 
-export const LinkedIn = styled.div`
+export const LinkedIn = styled.button`
   display: flex;
+  background: none;
+  border: none;
 `;
 
 export const LinkedInLogo = styled.img`
