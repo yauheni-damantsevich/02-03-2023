@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react/macro";
 
 export const MainWrapper = styled.section`
   position: relative;
