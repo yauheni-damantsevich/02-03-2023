@@ -3,15 +3,17 @@ import Bg6 from "../../assets/bg6.png";
 
 export const LogoIcon = styled.img`
   align-self: center;
+  margin: 99px 0 0 0;
 `;
 
 export const SectionWrapper = styled.section`
   background-image: url(${Bg6});
   background-repeat: no-repeat;
   background-color: #343638;
-  height: 726px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 1006px;
 `;
 
 export const H2 = styled.h2`
@@ -95,4 +97,11 @@ export const Copyright = styled.p`
   font-size: 14px;
   line-height: 55px;
   color: #ffffff;
+`;
+
+export const LargeLogo = styled.img`
+  top: 366px;
+  right: 0;
+  position: absolute;
+  z-index: 2;
 `;

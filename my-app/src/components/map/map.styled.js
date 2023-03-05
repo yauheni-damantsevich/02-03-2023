@@ -5,6 +5,7 @@ export const MapWrapper = styled.div`
   background-repeat: no-repeat;
   background-color: #ffffff;
   height: 726px;
+  padding: 0 0 24px 0;
 `;
 
 export const Point1 = styled.button`
