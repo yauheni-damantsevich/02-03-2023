@@ -29,12 +29,12 @@ export const LargeLogo = styled.img`
   top: 529px;
   left: 0;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 `;
 
 export const LargeLogo2 = styled.img`
   bottom: -184px;
   right: 0;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 `;

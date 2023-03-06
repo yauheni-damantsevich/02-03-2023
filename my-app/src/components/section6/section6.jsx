@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import React from "react";
 import {
   SectionWrapper,
@@ -21,6 +22,11 @@ export default function Section6() {
   const pullData = (data) => {
     setActiveContent(data);
   };
+  const [showMore, setShowMore] = React.useState(false);
+  const pullMoreData = (data) => {
+    setShowMore(data);
+  };
+  console.log(showMore);
   return (
     <SectionWrapper>
       <H2>Our Facilities</H2>
@@ -33,9 +39,31 @@ export default function Section6() {
           state={pullData}
         />
       </TabWrapper>
-      {activeContent === "tab1" ? <List data={data} /> : <List data={data} />}
-      <LargeLogo src={LargeLogoImage4} />
-      <LargeLogo2 src={LargeLogoImage5} />
+      {activeContent === "tab1" ? (
+        <List state={pullMoreData} data={data} />
+      ) : (
+        <List state={pullMoreData} data={data} />
+      )}
+      <LargeLogo
+        css={
+          !showMore
+            ? css`
+                top: 368px;
+              `
+            : null
+        }
+        src={LargeLogoImage4}
+      />
+      <LargeLogo2
+        css={
+          !showMore
+            ? css`
+                display: none;
+              `
+            : null
+        }
+        src={LargeLogoImage5}
+      />
     </SectionWrapper>
   );
 }

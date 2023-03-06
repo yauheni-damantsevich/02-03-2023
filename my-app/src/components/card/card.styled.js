@@ -6,9 +6,9 @@ export const CardWrapper = styled.div`
 
 export const Image = styled.img``;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.button`
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 54px;
   right: -88px;
   max-width: 187px;
@@ -19,6 +19,7 @@ export const ContentWrapper = styled.div`
   gap: 26px;
   background: #d6a43b;
   padding: 0 26px;
+  cursor: pointer;
 `;
 
 export const H3 = styled.h3`
