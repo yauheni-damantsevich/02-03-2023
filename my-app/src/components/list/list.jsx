@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ListWrapper,
   Button,
@@ -15,8 +15,11 @@ import ArrowDownIcon from "../../assets/Arrow-icon.svg";
 export default function List(data) {
   const [showMore, setShowMore] = React.useState(false);
   const shortData = [...data.data.slice(0, 9)];
-  console.log(data);
-  data.state(showMore);
+
+  useEffect(() => {
+    data.state(showMore);
+  });
+
   return (
     <ListWrapper
       css={

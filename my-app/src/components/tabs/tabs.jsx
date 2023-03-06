@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, TabWrapper } from "./tabs.styled";
 
 export default function Tabs(props) {
@@ -9,7 +9,9 @@ export default function Tabs(props) {
   const handleTab2 = () => {
     setActiveTab("tab2");
   };
-  props.state(activeTab);
+  useEffect(() => {
+    props.state(activeTab);
+  });
   return (
     <TabWrapper>
       <Button

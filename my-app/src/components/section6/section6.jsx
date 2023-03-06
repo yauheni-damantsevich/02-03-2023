@@ -26,7 +26,6 @@ export default function Section6() {
   const pullMoreData = (data) => {
     setShowMore(data);
   };
-  console.log(showMore);
   return (
     <SectionWrapper>
       <H2>Our Facilities</H2>
