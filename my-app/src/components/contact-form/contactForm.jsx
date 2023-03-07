@@ -9,25 +9,61 @@ import {
   SendButtonIcon,
 } from "./contactForm.styled";
 
+import SendData from "../../api/sendData";
+
 import SendIcon from "../../assets/SendIcon.svg";
 
 export default function ContactForm() {
+  const formReducer = (state, event) => {
+    return {
+      ...state,
+      [event.target.name]: event.target.value,
+    };
+  };
+
+  const [submitting, setSubmitting] = React.useState(false);
+  const [formData, setFormData] = React.useReducer(formReducer, {});
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    sendRequest(formData);
+    setTimeout(() => {
+      setSubmitting(false);
+    }, 3000);
+  };
+  const sendRequest = (data) => (submitting ? SendData(data) : null);
+
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Description>
         Atlas Healthcare Group welcomes inquiries regarding our services and how
         we may be of assistance to you. Please fill out the contact form below.
       </Description>
       <Wrapper>
-        <Input type="text" placeholder="Name:" />
+        <Input
+          name="name"
+          type="text"
+          placeholder="Name:"
+          onChange={setFormData}
+        />
       </Wrapper>
       <Wrapper>
-        <Input type="email" placeholder="Email:" />
+        <Input
+          name="email"
+          type="email"
+          placeholder="Email:"
+          onChange={setFormData}
+        />
       </Wrapper>
       <Wrapper>
-        <TextArea placeholder="Message:" />
+        <TextArea
+          name="message"
+          placeholder="Message:"
+          onChange={setFormData}
+        />
       </Wrapper>
-      <SendButton>
+      <SendButton type="submit">
         <SendButtonIcon src={SendIcon} />
       </SendButton>
     </Form>

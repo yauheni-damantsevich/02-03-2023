@@ -28,6 +28,7 @@ import LargeLogoImage6 from "../../assets/LargeLogoOutline6.svg";
 export default function Section8() {
   const description =
     "1815 Lakewood Road\nToms River, NJ 08753\n(732) 491-9216";
+
   return (
     <SectionWrapper>
       <LogoIcon src={HeaderLogoIcon} />
