@@ -14,6 +14,7 @@ export const Point1 = styled.button`
   border: none;
   top: 154px;
   left: 670px;
+  cursor: pointer;
 `;
 
 export const Point2 = styled.button`
@@ -22,6 +23,7 @@ export const Point2 = styled.button`
   border: none;
   top: 208px;
   left: 294px;
+  cursor: pointer;
 `;
 
 export const Point3 = styled.button`
@@ -30,6 +32,7 @@ export const Point3 = styled.button`
   border: none;
   top: 216px;
   left: 484px;
+  cursor: pointer;
 `;
 
 export const Point4 = styled.button`
@@ -38,6 +41,7 @@ export const Point4 = styled.button`
   border: none;
   top: 291px;
   left: 226px;
+  cursor: pointer;
 `;
 
 export const Point5 = styled.button`
@@ -46,6 +50,7 @@ export const Point5 = styled.button`
   border: none;
   top: 405px;
   left: 554px;
+  cursor: pointer;
 `;
 
 export const Point6 = styled.button`
@@ -54,6 +59,7 @@ export const Point6 = styled.button`
   border: none;
   top: 629px;
   left: 294px;
+  cursor: pointer;
 `;
 
 export const Point7 = styled.button`
@@ -62,6 +68,7 @@ export const Point7 = styled.button`
   border: none;
   top: 676px;
   left: 241px;
+  cursor: pointer;
 `;
 
 export const Path = styled.path`
@@ -107,7 +114,7 @@ export const SmallWrapper = styled.div`
   align-self: center;
 `;
 
-export const Phone = styled.span`
+export const Phone = styled.a`
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
@@ -115,6 +122,7 @@ export const Phone = styled.span`
   line-height: 30px;
   color: #343638;
   margin: 0 0 16px 0;
+  text-decoration: none;
 `;
 
 export const Site = styled.span`

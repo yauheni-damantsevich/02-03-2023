@@ -69,7 +69,9 @@ export default function Main() {
                   <CallLogoIcon src={CallIcon} />
                   <SpanWrapper>
                     <SpanDescription>Give us a call:</SpanDescription>
-                    <SpanCallDescription>(866) 923-3762</SpanCallDescription>
+                    <SpanCallDescription href="tel:8669233762">
+                      (866) 923-3762
+                    </SpanCallDescription>
                   </SpanWrapper>
                 </SmallWrapper>
               </SideWrapper>

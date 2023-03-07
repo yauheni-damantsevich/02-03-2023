@@ -27,7 +27,6 @@ export const H1 = styled.h1`
   font-size: 80px;
   line-height: 139px;
   color: #ffffff;
-  /* fix with font */
   margin: 0 0 30px 0;
 `;
 
@@ -80,13 +79,13 @@ export const TabWrapper = styled.div`
 export const Tab = styled.button`
   background: none;
   border: none;
-  cursor: pointer;
   font-family: "Lato";
   font-style: normal;
   font-weight: 900;
   font-size: 20px;
   line-height: 55px;
   color: #ffffff;
+  cursor: pointer;
 `;
 
 export const SmallWrapper = styled.div`
@@ -108,27 +107,26 @@ export const SpanDescription = styled.span`
   color: #ffffff;
 `;
 
-export const SpanCallDescription = styled.span`
+export const SpanCallDescription = styled.a`
   font-family: "Lato";
   font-style: normal;
   font-weight: 900;
   font-size: 35px;
   line-height: 40px;
   color: #ffffff;
+  text-decoration: none;
 `;
 
-export const CallLogoIcon = styled.img`
-  /* fix with font */
-`;
+export const CallLogoIcon = styled.img``;
 
 export const ArrowDown = styled.button`
   position: absolute;
   background: none;
   border: none;
-  cursor: pointer;
   top: 633px;
   right: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 `;
 
 export const ArrowDownButtonIcon = styled.img``;

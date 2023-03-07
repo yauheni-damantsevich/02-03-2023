@@ -15,7 +15,9 @@ export default function CallBlock() {
       <CallIcon src={CallIconImage} />
       <SpanWrapper>
         <SmallDescription>Give us a call:</SmallDescription>
-        <SpanCallDescription>(866) 923-3762</SpanCallDescription>
+        <SpanCallDescription href="tel:8669233762">
+          (866) 923-3762
+        </SpanCallDescription>
       </SpanWrapper>
     </Wrapper>
   );

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
+  z-index: 3;
   display: flex;
 `;
 
@@ -25,11 +26,12 @@ export const SmallDescription = styled.p`
   color: #ffffff;
 `;
 
-export const SpanCallDescription = styled.span`
+export const SpanCallDescription = styled.a`
   font-family: "Lato";
   font-style: normal;
   font-weight: 900;
   font-size: 35px;
   line-height: 40px;
   color: #d6a43b;
+  text-decoration: none;
 `;

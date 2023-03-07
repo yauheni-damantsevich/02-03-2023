@@ -18,8 +18,8 @@ export const Button = styled.button`
   align-items: center;
   background: none;
   border: none;
-  cursor: pointer;
   padding: 16px;
+  cursor: pointer;
 `;
 export const ButtonText = styled.p`
   font-family: "Lato";
