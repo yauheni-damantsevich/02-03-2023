@@ -7,11 +7,6 @@ import {
   Wrapper,
   Image,
   Description,
-  SmallWrapper,
-  CallIcon,
-  SpanWrapper,
-  SmallDescription,
-  SpanCallDescription,
   LargeLogo,
 } from "./section5.styled";
 
