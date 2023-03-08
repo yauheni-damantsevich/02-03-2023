@@ -14,4 +14,7 @@ export const Button = styled.button`
   align-self: center;
   max-width: 270px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    margin: 16px 0 16px 0;
+  }
 `;

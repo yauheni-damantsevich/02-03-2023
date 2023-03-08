@@ -14,6 +14,11 @@ export const SectionWrapper = styled.section`
   flex-direction: column;
   position: relative;
   height: 1006px;
+  padding: 0 16px;
+  @media (max-width: 768px) {
+    background-size: cover;
+    height: 100%;
+  }
 `;
 
 export const H2 = styled.h2`
@@ -25,6 +30,11 @@ export const H2 = styled.h2`
   line-height: 139px;
   color: #ffffff;
   align-self: center;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 28px;
+    line-height: 70px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -32,12 +42,24 @@ export const ContentWrapper = styled.div`
   gap: 160px;
   justify-content: center;
   margin: 0 0 34px 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    z-index: 3;
+    align-self: center;
+    gap: 32px;
+  }
 `;
 
 export const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    z-index: 3;
+    align-self: center;
+    gap: 32px;
+  }
 `;
 
 export const Hr = styled.hr`

@@ -9,6 +9,10 @@ export const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
+  @media (max-width: 768px) {
+    padding: 0 0 140px 0;
+    background-size: cover;
+  }
 `;
 
 export const H2 = styled.h2`
@@ -20,4 +24,9 @@ export const H2 = styled.h2`
   line-height: 139px;
   color: #ffffff;
   align-self: center;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 28px;
+    line-height: 70px;
+  }
 `;

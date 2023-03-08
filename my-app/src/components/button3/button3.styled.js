@@ -13,4 +13,7 @@ export const Button = styled.button`
   align-self: flex-start;
   max-width: 270px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 `;

@@ -9,6 +9,11 @@ export const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 0 16px;
+  @media (max-width: 768px) {
+    padding: 0 0 168px 0;
+    background-size: cover;
+  }
 `;
 
 export const H2 = styled.h2`
@@ -20,6 +25,11 @@ export const H2 = styled.h2`
   line-height: 139px;
   color: #ffffff;
   align-self: center;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 28px;
+    line-height: 70px;
+  }
 `;
 
 export const WrapperColor = styled.div`
@@ -29,6 +39,12 @@ export const WrapperColor = styled.div`
   padding: 35px 62px;
   background: #d6a43b;
   max-height: 150px;
+  z-index: 3;
+  @media (max-width: 768px) {
+    flex-shrink: 0;
+    max-width: 200px;
+    align-self: center;
+  }
 `;
 
 export const Image = styled.img`
@@ -39,14 +55,22 @@ export const Image = styled.img`
 
 export const MainWrapper = styled.div`
   display: flex;
-  gap: 173px;
+  gap: 11.931vw;
   justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 452px;
+  @media (max-width: 768px) {
+    align-self: center;
+    text-align: center;
+    margin: 0;
+  }
 `;
 
 export const Description = styled.p`

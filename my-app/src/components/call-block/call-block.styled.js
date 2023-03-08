@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 export const Wrapper = styled.div`
   z-index: 3;
   display: flex;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 `;
 
 export const CallIcon = styled.img`

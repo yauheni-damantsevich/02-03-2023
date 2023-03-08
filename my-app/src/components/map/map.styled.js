@@ -6,6 +6,12 @@ export const MapWrapper = styled.div`
   background-color: #ffffff;
   height: 726px;
   padding: 0 0 24px 0;
+  @media (max-width: 768px) {
+    width: calc(100vw - 32px);
+    height: calc(100vw - 32px);
+    margin: 0 auto;
+    background-size: cover;
+  }
 `;
 
 export const Point1 = styled.button`
@@ -15,6 +21,10 @@ export const Point1 = styled.button`
   top: 154px;
   left: 670px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    top: 20.052vw;
+    left: 87.24vw;
+  }
 `;
 
 export const Point2 = styled.button`
@@ -24,6 +34,10 @@ export const Point2 = styled.button`
   top: 208px;
   left: 294px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    top: 27.083vw;
+    left: 38.281vw;
+  }
 `;
 
 export const Point3 = styled.button`
@@ -33,6 +47,10 @@ export const Point3 = styled.button`
   top: 216px;
   left: 484px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    top: 28.125vw;
+    left: 63.021vw;
+  }
 `;
 
 export const Point4 = styled.button`
@@ -42,6 +60,10 @@ export const Point4 = styled.button`
   top: 291px;
   left: 226px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    top: 37.891vw;
+    left: 29.427vw;
+  }
 `;
 
 export const Point5 = styled.button`
@@ -51,6 +73,10 @@ export const Point5 = styled.button`
   top: 405px;
   left: 554px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    top: 52.734vw;
+    left: 72.135vw;
+  }
 `;
 
 export const Point6 = styled.button`
@@ -60,6 +86,10 @@ export const Point6 = styled.button`
   top: 629px;
   left: 294px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    top: 81.901vw;
+    left: 38.281vw;
+  }
 `;
 
 export const Point7 = styled.button`
@@ -69,6 +99,10 @@ export const Point7 = styled.button`
   top: 676px;
   left: 241px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    top: 88.021vw;
+    left: 31.38vw;
+  }
 `;
 
 export const Path = styled.path`
@@ -85,6 +119,15 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background: #d6a43b;
+  @media (max-width: 992px) {
+    top: 750px;
+    left: 0;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    top: 98vw;
+  }
 `;
 
 export const Content = styled.div`

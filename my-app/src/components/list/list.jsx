@@ -20,6 +20,15 @@ export default function List(data) {
     data.state(showMore);
   });
 
+  const [width, setWidth] = React.useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+  const breakpoint = 1050;
+
+  const extraShortData = [...data.data.slice(0, 3)];
+  console.log(width);
   return (
     <ListWrapper
       css={
@@ -34,12 +43,22 @@ export default function List(data) {
                 width: calc(100% + 88px);
                 height: 400px;
                 background: rgba(52, 54, 56, 0.9);
+                @media (max-width: 1450px) {
+                  height: 1200px;
+                }
+                @media (max-width: 1050px) {
+                  height: 400px;
+                }
+                @media (max-width: 768px) {
+                  width: 120vw;
+                  transform: translate(-50%, 0);
+                }
               }
             `
           : null
       }
     >
-      {showMore
+      {showMore && width > breakpoint
         ? data.data.map((item) => (
             <Card
               key={item.id}
@@ -48,14 +67,38 @@ export default function List(data) {
               place={item.place}
             />
           ))
-        : shortData.map((item) => (
+        : null}
+      {!showMore && width > breakpoint
+        ? shortData.map((item) => (
             <Card
               key={item.id}
               image={item.image}
               title={item.title}
               place={item.place}
             />
-          ))}
+          ))
+        : null}
+      {!showMore && width < breakpoint
+        ? extraShortData.map((item) => (
+            <Card
+              key={item.id}
+              image={item.image}
+              title={item.title}
+              place={item.place}
+            />
+          ))
+        : null}
+      {showMore && width < breakpoint
+        ? data.data.map((item) => (
+            <Card
+              key={item.id}
+              image={item.image}
+              title={item.title}
+              place={item.place}
+            />
+          ))
+        : null}
+
       {!showMore ? (
         <Button onClick={() => setShowMore(true)}>
           <ButtonText>Show more</ButtonText>

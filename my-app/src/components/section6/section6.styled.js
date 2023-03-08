@@ -17,6 +17,11 @@ export const H2 = styled.h2`
   line-height: 139px;
   color: #d6a43b;
   align-self: center;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 28px;
+    line-height: 70px;
+  }
 `;
 
 export const TabWrapper = styled.div`

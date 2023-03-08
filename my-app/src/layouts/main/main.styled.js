@@ -3,7 +3,6 @@ import Bg1 from "../../assets/bg1.png";
 
 export const Container = styled.div`
   max-width: 1450px;
-  padding: 0 16px;
   margin: 0 auto;
 `;
 
@@ -14,6 +13,14 @@ export const Section1 = styled.section`
   display: flex;
   justify-content: center;
   position: relative;
+  padding: 0 16px;
+  @media (min-width: 992px) and (max-width: 1100px) {
+    background-size: cover;
+  }
+  @media (max-width: 768px) {
+    background-size: cover;
+    background-position: center;
+  }
 `;
 
 export const MainContent = styled.div`
@@ -28,16 +35,28 @@ export const H1 = styled.h1`
   line-height: 139px;
   color: #ffffff;
   margin: 0 0 30px 0;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 40px;
+    line-height: 70px;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 export const SideWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 `;
 
 export const Description = styled.p`
@@ -58,6 +77,12 @@ export const SmallDescription = styled.p`
   font-size: 15px;
   line-height: 30px;
   color: #ffffff;
+  @media (max-width: 992px) {
+    margin: 0 0 120px 0;
+  }
+  @media (max-width: 768px) {
+    margin: 0 0 30px 0;
+  }
 `;
 
 export const TabWrapper = styled.div`
@@ -91,6 +116,9 @@ export const Tab = styled.button`
 export const SmallWrapper = styled.div`
   display: flex;
   gap: 11px;
+  @media (max-width: 768px) {
+    margin: 0 0 44px 0;
+  }
 `;
 
 export const SpanWrapper = styled.div`
@@ -127,6 +155,9 @@ export const ArrowDown = styled.button`
   right: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  @media (max-width: 992px) {
+    top: 864px;
+  }
 `;
 
 export const ArrowDownButtonIcon = styled.img``;
