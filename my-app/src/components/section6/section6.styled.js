@@ -35,6 +35,9 @@ export const LargeLogo = styled.img`
   left: 0;
   position: absolute;
   z-index: 1;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const LargeLogo2 = styled.img`
@@ -42,4 +45,7 @@ export const LargeLogo2 = styled.img`
   right: 0;
   position: absolute;
   z-index: 1;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;

@@ -122,4 +122,7 @@ export const LargeLogo = styled.img`
   left: 0;
   position: absolute;
   z-index: 2;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
