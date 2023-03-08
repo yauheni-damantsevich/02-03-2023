@@ -26,7 +26,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 12.396vw 0 0;
+  padding: 0 238px 0 0;
   @media (max-width: 992px) {
     padding: 0 16px 0 0;
   }
