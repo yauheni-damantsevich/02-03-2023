@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import {
   Form,
   Description,
@@ -8,8 +9,6 @@ import {
   SendButton,
   SendButtonIcon,
 } from "./contactForm.styled";
-
-import SendData from "../../api/sendData";
 
 import SendIcon from "../../assets/SendIcon.svg";
 
@@ -27,12 +26,39 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitting(true);
-    sendRequest(formData);
     setTimeout(() => {
       setSubmitting(false);
     }, 3000);
   };
-  const sendRequest = (data) => (submitting ? SendData(data) : null);
+
+  // "With the free plan, only WordPress default endpoints can be authenticated"
+
+  const url =
+    "http://localhost:8000/index.php?rest_route=/contact-form-7/v1/contact-forms/35/feedback";
+  const config = {
+    headers: {
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "content-type, Authorization",
+      "Content-Type": "multipart/form-data",
+    },
+  };
+
+  const data = {
+    "your-name": formData.name,
+    "your-email": formData.email,
+    "your-message": formData.message,
+  };
+
+  useEffect(() => {
+    function sendData(data) {
+      axios.post(url, data, config).then((res) => {
+        console.log(res);
+      });
+    }
+    if (submitting) {
+      sendData(data);
+    }
+  });
 
   return (
     <Form onSubmit={handleSubmit}>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import {
   SectionWrapper,
   H2,
@@ -20,8 +21,23 @@ import LargeLogoImage3 from "../../assets/LargeLogoOutline3.svg";
 export default function Section5() {
   const buttonTitle = "Join Our Team";
   const button2Title = "News";
-  return (
-    <SectionWrapper>
+
+  const [data, setData] = React.useState({});
+  const fetchData = () => {
+    axios
+      .get("http://localhost:8000/index.php?rest_route=/wp/v2/pages/137")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return data ? (
+    <SectionWrapper background={data?.acf?.["image-background"]}>
       <H2>Supporting Your Health</H2>
       <MainWrapper>
         <WrapperColor>
@@ -29,17 +45,15 @@ export default function Section5() {
           <Button2 title={buttonTitle} />
         </WrapperColor>
         <Wrapper>
-          <Description>
-            We are committed to the delivery of highly individualized,
-            client-centered care and providing the best possible experience to
-            those we serve and the families who entrust their loved ones to us.
-          </Description>
+          <Description>{data?.acf?.description}</Description>
 
           <CallBlock />
-          <Button3 title={button2Title} />
+          <Button3 title={data?.acf?.["button-text"]} />
         </Wrapper>
       </MainWrapper>
       <LargeLogo src={LargeLogoImage3} />
     </SectionWrapper>
+  ) : (
+    <div>Loading...</div>
   );
 }

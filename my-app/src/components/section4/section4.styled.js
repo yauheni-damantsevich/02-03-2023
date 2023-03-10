@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Bg3 from "../../assets/bg3.png";
 
 export const SectionWrapper = styled.section`
-  background-image: url(${Bg3});
+  background-image: url(${(props) => props.background});
   background-repeat: no-repeat;
   background-color: #343638;
   height: 726px;

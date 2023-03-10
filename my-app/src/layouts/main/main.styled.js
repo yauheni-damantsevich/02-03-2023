@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Bg1 from "../../assets/bg1.png";
+// import Bg1 from "../../assets/bg1.png";
 
 export const Container = styled.div`
   max-width: 1450px;
@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Section1 = styled.section`
-  background-image: url(${Bg1});
+  background-image: url(${(props) => props.background});
   background-repeat: no-repeat;
   background-color: #343638;
   display: flex;
