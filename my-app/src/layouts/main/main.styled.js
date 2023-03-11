@@ -161,6 +161,9 @@ export const ArrowDown = styled.button`
   @media (max-width: 768px) {
     top: 900px;
   }
+  @media (max-width: 576px) {
+    top: 965px;
+  }
 `;
 
 export const ArrowDownButtonIcon = styled.img``;
