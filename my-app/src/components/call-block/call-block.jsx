@@ -14,7 +14,9 @@ export default function CallBlock() {
   const [telephoneData, setTelephoneData] = React.useState({});
   const fetchTelephoneData = () => {
     axios
-      .get("http://localhost:8000/index.php?rest_route=/wp/v2/pages/160")
+      .get(
+        "https://dev-atlas-healthcare.pantheonsite.io/index.php?rest_route=/wp/v2/pages/160"
+      )
       .then((res) => {
         setTelephoneData(res.data);
       });

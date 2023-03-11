@@ -9,7 +9,9 @@ export default function Section2() {
   const [data, setData] = React.useState({});
   const fetchData = () => {
     axios
-      .get("http://localhost:8000/index.php?rest_route=/wp/v2/pages/94")
+      .get(
+        "https://dev-atlas-healthcare.pantheonsite.io/index.php?rest_route=/wp/v2/pages/94"
+      )
       .then((res) => {
         setData(res.data);
       })

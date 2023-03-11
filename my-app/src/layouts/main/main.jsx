@@ -44,7 +44,9 @@ export default function Main() {
 
   const fetchData = () => {
     axios
-      .get("http://localhost:8000/index.php?rest_route=/wp/v2/pages/86")
+      .get(
+        "https://dev-atlas-healthcare.pantheonsite.io/index.php?rest_route=/wp/v2/pages/86"
+      )
       .then((res) => {
         setData(res.data);
       })
@@ -54,7 +56,9 @@ export default function Main() {
   const [telephoneData, setTelephoneData] = React.useState({});
   const fetchTelephoneData = () => {
     axios
-      .get("http://localhost:8000/index.php?rest_route=/wp/v2/pages/160")
+      .get(
+        "https://dev-atlas-healthcare.pantheonsite.io/index.php?rest_route=/wp/v2/pages/160"
+      )
       .then((res) => {
         setTelephoneData(res.data);
       });
