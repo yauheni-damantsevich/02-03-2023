@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
+
 import {
   SectionWrapper,
   H2,
@@ -11,6 +13,7 @@ import {
 
 import Tabs from "../tabs/tabs";
 import List from "../list/list";
+import ServerList from "../server-list/serverList";
 import { data } from "../../assets/data.js";
 import LargeLogoImage4 from "../../assets/LargeLogoOutline4.svg";
 import LargeLogoImage5 from "../../assets/LargeLogoOutline5.svg";
@@ -26,7 +29,26 @@ export default function Section6() {
   const pullMoreData = (data) => {
     setShowMore(data);
   };
-  return (
+
+  const pullMoreServerData = (data) => {
+    setShowMore(data);
+  };
+  const [serverData, setServerData] = React.useState({}); // I can't load svg on server...
+  const fetchData = () => {
+    axios
+      .get(
+        "https://dev-atlas-healthcare.pantheonsite.io/index.php?rest_route=/wp/v2/pages/&parent=143"
+      )
+      .then((res) => {
+        setServerData(res.data);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  return data && serverData ? (
     <SectionWrapper>
       <H2>Our Facilities</H2>
       <TabWrapper>
@@ -39,9 +61,9 @@ export default function Section6() {
         />
       </TabWrapper>
       {activeContent === "tab1" ? (
-        <List state={pullMoreData} data={data} />
+        <List state={pullMoreData} data={data} /> // I left this data to demonstrate the layout. Because there is no time to create so much data on the server
       ) : (
-        <List state={pullMoreData} data={data} />
+        <ServerList state={pullMoreServerData} data={serverData} /> // And here is the data received from the server
       )}
       <LargeLogo
         css={
@@ -64,5 +86,7 @@ export default function Section6() {
         src={LargeLogoImage5}
       />
     </SectionWrapper>
+  ) : (
+    <div>Loading...</div>
   );
 }

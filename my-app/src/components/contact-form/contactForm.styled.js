@@ -36,6 +36,7 @@ export const SendButton = styled.button`
   align-self: flex-end;
   background: none;
   border: none;
+  cursor: pointer;
 `;
 
 export const SendButtonIcon = styled.img``;

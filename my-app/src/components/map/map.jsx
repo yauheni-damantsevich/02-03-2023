@@ -181,7 +181,11 @@ export default function Map(props) {
           <Icon src={activeContent[0].logo} />
           <Address>{activeContent[0].address}</Address>
           <SmallWrapper>
-            <Phone>{activeContent[0].phone}</Phone>
+            <Phone
+              href={`tel:${activeContent[0].phone.replace(/[()\s-]/g, "")}`}
+            >
+              {activeContent[0].phone}
+            </Phone>
             <Site>{activeContent[0].site}</Site>
           </SmallWrapper>
         </Content>

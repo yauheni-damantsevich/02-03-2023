@@ -6,15 +6,16 @@ import {
   Button,
   ButtonText,
   ArrowDownButtonIcon,
-} from "./list.styled";
+} from "./serverList.styled";
 
 import Card from "../card/card";
 
 import ArrowDownIcon from "../../assets/Arrow-icon.svg";
 
-export default function List(data) {
+export default function ServerList(data) {
   const [showMore, setShowMore] = React.useState(false);
-  const shortData = [...data.data.slice(0, 9)];
+
+  // const shortData = [...data.data.slice(0, 9)];
 
   useEffect(() => {
     data.state(showMore);
@@ -27,7 +28,7 @@ export default function List(data) {
   }, []);
   const breakpoint = 1050;
 
-  const extraShortData = [...data.data.slice(0, 3)];
+  // const extraShortData = [...data.data.slice(0, 3)];
 
   return (
     <ListWrapper
@@ -62,29 +63,29 @@ export default function List(data) {
         ? data.data.map((item) => (
             <Card
               key={item.id}
-              image={item.image}
-              title={item.title}
-              place={item.place}
+              image={item?.acf?.image}
+              title={item.title.rendered}
+              place={item.acf?.place}
             />
           ))
         : null}
       {!showMore && width > breakpoint
-        ? shortData.map((item) => (
+        ? data.data.map((item) => (
             <Card
               key={item.id}
-              image={item.image}
-              title={item.title}
-              place={item.place}
+              image={item?.acf?.image}
+              title={item.title.rendered}
+              place={item.acf?.place}
             />
           ))
         : null}
       {!showMore && width < breakpoint
-        ? extraShortData.map((item) => (
+        ? data.data.map((item) => (
             <Card
               key={item.id}
-              image={item.image}
-              title={item.title}
-              place={item.place}
+              image={item?.acf?.image}
+              title={item.title.rendered}
+              place={item.acf?.place}
             />
           ))
         : null}
@@ -92,9 +93,9 @@ export default function List(data) {
         ? data.data.map((item) => (
             <Card
               key={item.id}
-              image={item.image}
-              title={item.title}
-              place={item.place}
+              image={item?.acf?.image}
+              title={item.title.rendered}
+              place={item.acf?.place}
             />
           ))
         : null}

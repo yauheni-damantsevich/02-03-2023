@@ -6,10 +6,11 @@ import {
   Description,
 } from "./block2.styled";
 import Button2 from "../button2/button2";
-import ImageBuilding from "../../assets/building2-AtlasCorp1.png";
+// import ImageBuilding from "../../assets/building2-AtlasCorp1.png";
 
-export default function Block1() {
-  const buttonTitle = "Our Services";
+export default function Block1(props) {
+  // const buttonTitle = "Our Services";
+
   return (
     <BlockWrapper>
       <ContentWrapper>
@@ -19,9 +20,9 @@ export default function Block1() {
           sought-after for their consulting services. Our experience has proven
           successful in our own facilities. Now, we put it to work for yours.
         </Description>
-        <Button2 title={buttonTitle} />
+        <Button2 title={props.buttonText} />
       </ContentWrapper>
-      <Image src={ImageBuilding} />
+      <Image src={props.image} />
     </BlockWrapper>
   );
 }

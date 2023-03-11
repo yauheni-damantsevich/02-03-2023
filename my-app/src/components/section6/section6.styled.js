@@ -17,6 +17,11 @@ export const H2 = styled.h2`
   line-height: 139px;
   color: #d6a43b;
   align-self: center;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 28px;
+    line-height: 70px;
+  }
 `;
 
 export const TabWrapper = styled.div`
@@ -30,6 +35,9 @@ export const LargeLogo = styled.img`
   left: 0;
   position: absolute;
   z-index: 1;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const LargeLogo2 = styled.img`
@@ -37,4 +45,7 @@ export const LargeLogo2 = styled.img`
   right: 0;
   position: absolute;
   z-index: 1;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;

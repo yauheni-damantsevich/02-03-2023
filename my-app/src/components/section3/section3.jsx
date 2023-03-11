@@ -15,6 +15,7 @@ import LargeLogoImage2 from "../../assets/LargeLogoOutline2.svg";
 
 export default function Section3() {
   const buttonTitle = "Improve Your Health";
+
   return (
     <MainWrapper>
       <SectionWrapper>

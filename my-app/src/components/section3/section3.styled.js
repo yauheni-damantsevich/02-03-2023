@@ -7,6 +7,10 @@ export const MainWrapper = styled.section`
   display: flex;
   justify-content: center;
   gap: 50px;
+  padding: 77px 16px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const SectionWrapper = styled.div`
@@ -14,6 +18,13 @@ export const SectionWrapper = styled.div`
   flex-direction: column;
   gap: 94px;
   max-width: 419px;
+  @media (max-width: 992px) {
+    flex-shrink: 2;
+  }
+  @media (max-width: 768px) {
+    flex-shrink: 3;
+    align-self: center;
+  }
 `;
 
 export const LargeDescription = styled.p`
@@ -24,11 +35,19 @@ export const LargeDescription = styled.p`
   line-height: 40px;
   color: #ffffff;
   text-align: right;
+  @media (max-width: 768px) {
+    flex-shrink: 3;
+    align-self: center;
+    text-align: center;
+  }
 `;
 
 export const Icon = styled.img`
   align-self: flex-start;
   padding: 24px 0 0 0;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
 `;
 
 export const SmallDescription = styled.p`
@@ -39,6 +58,14 @@ export const SmallDescription = styled.p`
   font-size: 15px;
   line-height: 30px;
   color: #ffffff;
+  @media (max-width: 992px) {
+    flex-shrink: 3;
+  }
+  @media (max-width: 768px) {
+    flex-shrink: 4;
+    align-self: center;
+    text-align: center;
+  }
 `;
 
 export const Span = styled.span`
@@ -55,4 +82,7 @@ export const LargeLogo = styled.img`
   right: 0;
   position: absolute;
   z-index: 2;
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;

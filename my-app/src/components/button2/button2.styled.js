@@ -12,6 +12,9 @@ export const Button = styled.button`
   color: #343638;
   padding: 16px 32px;
   align-self: center;
-  /* fix with font */
   max-width: 270px;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    margin: 16px 0 16px 0;
+  }
 `;

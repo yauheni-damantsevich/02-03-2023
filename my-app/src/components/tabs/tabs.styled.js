@@ -6,6 +6,9 @@ export const TabWrapper = styled.div`
   gap: 28px;
   align-self: center;
   padding: 0 0 73px 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Button = styled.button`
