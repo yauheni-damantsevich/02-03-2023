@@ -10,4 +10,7 @@ export const SectionWrapper = styled.section`
   @media (max-width: 768px) {
     margin: 0 0 348px 0;
   }
+  @media (max-width: 576px) {
+    margin: 0 0 368px 0;
+  }
 `;
