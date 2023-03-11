@@ -158,7 +158,7 @@ export const ArrowDown = styled.button`
   @media (max-width: 992px) {
     top: 864px;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     top: 900px;
   }
 `;
