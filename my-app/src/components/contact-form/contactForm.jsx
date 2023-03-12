@@ -31,8 +31,6 @@ export default function ContactForm() {
     }, 3000);
   };
 
-  // "With the free plan, only WordPress default endpoints can be authenticated"
-
   const url =
     "https://dev-atlas-healthcare.pantheonsite.io/index.php?rest_route=/contact-form-7/v1/contact-forms/35/feedback";
   const config = {

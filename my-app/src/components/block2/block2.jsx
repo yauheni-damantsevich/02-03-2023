@@ -6,11 +6,8 @@ import {
   Description,
 } from "./block2.styled";
 import Button2 from "../button2/button2";
-// import ImageBuilding from "../../assets/building2-AtlasCorp1.png";
 
 export default function Block1(props) {
-  // const buttonTitle = "Our Services";
-
   return (
     <BlockWrapper>
       <ContentWrapper>

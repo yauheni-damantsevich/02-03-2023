@@ -20,8 +20,6 @@ import LargeLogoImage3 from "../../assets/LargeLogoOutline3.svg";
 
 export default function Section5() {
   const buttonTitle = "Join Our Team";
-  // const button2Title = "News";
-
   const [data, setData] = React.useState({});
   const fetchData = () => {
     axios

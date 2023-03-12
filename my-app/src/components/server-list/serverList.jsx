@@ -15,8 +15,6 @@ import ArrowDownIcon from "../../assets/Arrow-icon.svg";
 export default function ServerList(data) {
   const [showMore, setShowMore] = React.useState(false);
 
-  // const shortData = [...data.data.slice(0, 9)];
-
   useEffect(() => {
     data.state(showMore);
   }, [showMore]);
@@ -27,8 +25,6 @@ export default function ServerList(data) {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
   const breakpoint = 1050;
-
-  // const extraShortData = [...data.data.slice(0, 3)];
 
   return (
     <ListWrapper

@@ -36,12 +36,6 @@ import axios from "axios";
 export default function Main() {
   const [data, setData] = React.useState({});
 
-  // const h1 = "You’re the center of our world";
-  // const description =
-  //   "Atlas Healthcare Group is a leading provider of healthcare management and consulting services, based in Central New Jersey.";
-  // const smallDescription =
-  //   "Our expertise in all things operational, clinical, and financial, positions us as a strategic partner for assisted living, long-term care and rehabilitation facilities. We work with healthcare centers to create superior resident experiences.";
-
   const fetchData = () => {
     axios
       .get(

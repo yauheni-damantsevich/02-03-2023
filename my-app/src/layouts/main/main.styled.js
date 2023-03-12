@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-// import Bg1 from "../../assets/bg1.png";
 
 export const Container = styled.div`
   max-width: 1450px;

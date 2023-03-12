@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-// import Bg2 from "../../assets/bg2.png";
 
 export const SectionWrapper = styled.section`
   background-image: url(${(props) => props.background});
