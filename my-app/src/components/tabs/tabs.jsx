@@ -11,7 +11,7 @@ export default function Tabs(props) {
   };
   useEffect(() => {
     props.state(activeTab);
-  });
+  }, [activeTab]);
   return (
     <TabWrapper>
       <Button

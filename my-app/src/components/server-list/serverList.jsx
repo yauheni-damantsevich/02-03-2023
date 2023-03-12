@@ -19,7 +19,7 @@ export default function ServerList(data) {
 
   useEffect(() => {
     data.state(showMore);
-  });
+  }, [showMore]);
 
   const [width, setWidth] = React.useState(window.innerWidth);
 

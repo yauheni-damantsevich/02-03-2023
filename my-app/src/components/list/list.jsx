@@ -18,7 +18,7 @@ export default function List(data) {
 
   useEffect(() => {
     data.state(showMore);
-  });
+  }, [showMore]);
 
   const [width, setWidth] = React.useState(window.innerWidth);
 
